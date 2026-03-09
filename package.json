@@ -13,6 +13,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "prepare": "npm run build",
     "prepublishOnly": "npm run build",
     "start": "node dist/server.js",
     "dev": "tsc && node dist/server.js"
