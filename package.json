@@ -1,0 +1,43 @@
+{
+  "name": "airbrake-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Airbrake error tracking (read-only)",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "airbrake-mcp": "dist/server.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/server.js",
+    "dev": "tsc && node dist/server.js"
+  },
+  "keywords": [
+    "airbrake",
+    "mcp",
+    "model-context-protocol",
+    "error-tracking"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/airbrake-mcp.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
