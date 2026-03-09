@@ -64,7 +64,7 @@ The server runs as a **stdio** subprocess. Point your MCP client at the **built*
 ### 1. Build the server once (in this repo)
 
 ```bash
-cd /Users/ryancamp/airbrake_mcp
+cd /path/to/airbrake_mcp
 npm install
 npm run build
 ```
@@ -80,7 +80,7 @@ Use the **absolute path** to `dist/server.js` so it works from any project.
   "mcpServers": {
     "airbrake": {
       "command": "node",
-      "args": ["/Users/ryancamp/airbrake_mcp/dist/server.js"],
+      "args": ["/path/to/airbrake_mcp/dist/server.js"],
       "env": {
         "AIRBRAKE_USER_KEY": "your-user-api-key-here"
       }
@@ -94,7 +94,7 @@ Use the **absolute path** to `dist/server.js` so it works from any project.
 **Other MCP clients** — run the server with:
 
 ```bash
-node /Users/ryancamp/airbrake_mcp/dist/server.js
+node /path/to/airbrake_mcp/dist/server.js
 ```
 
 Restart Cursor (or your client) after changing the config so it picks up the Airbrake server.
